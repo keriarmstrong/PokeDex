@@ -1,4 +1,6 @@
 Have a deployed front-end application.
+//tbd
+
 Allow for user interaction through button clicks and form inputs.
 // search bar for text input | Go (submit button)
 
@@ -27,7 +29,7 @@ You must use the :hover selector in at least one CSS rule.
 You must use an HTML form on at least one of your pages.
 // searchbar
 
-All of your pages must have some visual changes that occur when the screen is a different size.
+**All of your pages must have some visual changes that occur when the screen is a different size.
 // reactive to varying screen size (desktop, phone, tablet)
 
 ---------Front-end interactivity requirements-----------------
@@ -38,7 +40,7 @@ When a form is submitted on your page, JavaScript should prevent the default beh
 and some other effect should take place.
 // preventDefault
 
-There should be at least one way to incorrectly submit the form. When the form is incorrectly submitted, an error message should be added to the DOM for the user.
+**There should be at least one way to incorrectly submit the form. When the form is incorrectly submitted, an error message should be added to the DOM for the user.
 // mismatch spelling| no search entry, should trigger 'alert' window
 
 Based on a button click or form submission, an external API request must be made. Upon receiving a successful response, something visual on the page should change.

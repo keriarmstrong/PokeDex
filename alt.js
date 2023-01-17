@@ -1,26 +1,23 @@
 // console.log('JS connected')
-//create variable to access main starting points-------------------------
-const URL = 'https://pokeapi.co/api/v2/pokemon/?limit=1100'
+
 const main = document.querySelector('main')
 const search = document.querySelector('form')
 const searchValue = search.input.value
 
+const URL = 'https://pokeapi.co/api/v2/pokemon/?limit=1100'
 
+const userInput = (search.input.value).toLowerCase()
 
+//Create sumbit|fetch event for input/search bar--------------------------
 
-//Create sumbit event for input/search bar--------------------------
-search.addEventListener('submit', async (event) => {
-   event.preventDefault()
-
-        await fetch (`${URL}`)
+    // const getPokeData = () => {
+    fetch (`${URL}`)
     .then(res => {
         return res.json()})
     .then (data => {
     pokemons = data.results
-//standardize user input case sensitivity to match data (lower case)-------------------
-    const userInput = (search.input.value).toLowerCase()
-
-//loop through data using find method to find matching value from user input--------------
+    
+    
     const pokemon = (pokemons.find(pokemon => pokemon.name === userInput))
      
         fetch (pokemon.url)
@@ -34,7 +31,17 @@ search.addEventListener('submit', async (event) => {
         const heightRaw = `${((data1.height/10).toFixed(1))} meters`
         // const type2 = (data1.types[1].type.name) /*not all pokemon have secondary type need to address */
         
-
+        console.log(pokedexIndex);
+        console.log(art);
+        console.log(type1);
+        console.log(heightRaw);
+        console.log(weight)
+        console.log(pokemon.name)
+        console.log(search.input.value)
+        
+    search.addEventListener('submit',  (event) => {
+            event.preventDefault()
+            
         main.innerHTML = ""
         const pokemonImg = document.createElement('div')
         const pokemonDetails = document.createElement('div')
@@ -46,13 +53,18 @@ search.addEventListener('submit', async (event) => {
         pokemonDetails.innerHTML = `<h3>${pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</h3><ul><li>Index# ${pokedexIndex}</li><li>Height: ${heightRaw}</li><li>Weight: ${weight}</li><li>Type: ${type1}</ul>`
         main.append(pokemonImg, pokemonDetails)
         
+        // if (pokemon.name !== event.target.input.value){
+        // alert("The pokemon does Not exist \n please check your spelling");
+        // }
+    
+        // search.reset()
+        
 
         })
 //         .catch(error => 
 // alert("Not Found")
-//Reset the value in the search bar, after the submit event------------------------
+//     )
     search.reset()
     }) 
-    
-    
+    // alert("Does Not Exist")
 })
