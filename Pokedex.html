@@ -5,40 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéDex</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
     <script defer src="main.js"></script>
     <!-- <script defer src="./alt.js"></script> -->
 </head>
 <body>
-    <div class="nav-container">
-        <nav class="navBar">
-        <h1 id="navbar-logo">Pokémon</h1>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+   
+    <div class="container"> 
+        <div>
+            <img class="nav-logo" src="https://www.freepnglogos.com/uploads/gotta-catch-em-all-transparent-pokemon-logo-11.png"/>
         </div>
-        <ul class="nav-menu">
-            <li><a href="Home.html" class="nav-links">Home</a></li>
-            <li><a href="Pokedex.html" class="nav-links">Pokedex</a></li>
-            <li><a href="About.html" class="nav-links">About</a></li>
-        </ul>
-        </nav>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="Home.html" class="nav-links">Home</a></li>
+                <li><a href="Pokedex.html" class="nav-links">Pokedex</a></li>
+                <li><a href="About.html" class="nav-links">About</a></li>
+            </ul>
+        </div>
+            </nav>
+        
+        
+    
+        <div id="form-container">
+        <!-- <h2>Pokédex</h2> -->
+            <form class="form">
+                <input type="text" id ="search" name="input" autocomplete="on" placeholder="Choose Your Pokemon">
+                <button type="submit" id="btn" >I Choose You!</button>
+            </form>
+        </div>
 
-        </div>
-    </div>
-    <div class="form-container">
-        <h2>Pokédex</h2>
-    <form class="form">
-        <input type="text" id ="search" name="input" autocomplete="on" placeholder="Choose Your Pokemon">
-        <button type="submit" id="btn" >I Choose You!</button>
-    </form>
-    </div>
+    
     <main class="main">
       
 
     </main>
-    <footer class="footer"> Not Offical Licensed</footer>
+    <footer class="footer"> Not Offically Licensed</footer>
+    </div>
+    
 
 </body>
 </html>

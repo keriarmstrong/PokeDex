@@ -1,0 +1,254 @@
+body{
+    background-color:black;
+}
+p , h2 , article {
+    color:white
+}
+.container {
+    display:grid;
+    height: 100vh;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.4fr 3fr 0.1fr;
+    grid-gap: 2px;
+    grid-template: 
+        "logo nav nav"
+        "form form form"
+        "img img details"
+        "footer footer footer";
+   
+   
+   
+}
+.nav-logo{
+   
+    grid-area: logo;
+    height: 80.5px;
+    width: 166.6px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.nav-menu{
+    grid-area: nav;
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+.nav-menu li{
+    display: inline;
+    list-style: none;
+    width: 100%;  
+}
+.nav-links{
+    color: rgb(10, 77, 233);
+}
+.nav-links:hover{
+    color: rgb(251, 251, 5);
+    transition: all 0.2 ease-out;
+}
+#form-container {
+    grid-area: form;
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+.form-container h3{
+    color: white;
+}
+#search{
+    display: inline;
+    background-color: white;
+    border: 3px solid rgb(10, 77, 233);
+    border-radius: 8px;
+    
+}
+/* ------------------button----------------------- */
+#btn{
+    display: inline;
+    position: absolute;
+    color: rgb(10, 77, 233);
+    background:white;
+    font-weight: 500;
+    padding: 7px 14px;
+    margin: 5px;
+    border: 3px solid rgb(10, 77, 233);
+    border-radius: 8px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+#btn:before{
+    content: "";
+    position: absolute;
+    background: rgb(10, 77, 233);
+    height: 60px;
+    width: 112px;
+    border-radius: 0%;
+    z-index: -1;
+}
+#btn:hover{
+color: white;
+}
+#btn::before{
+    top:100%;
+    left:0%;
+    transition: 0.4s;
+}
+#btn:hover:before{
+    top: -20px;
+    left: 0px;
+    
+}
+.poke-pic {
+    box-sizing: border-box;
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 3/4;
+    grid-column: 1/ 3;
+   
+}
+
+.poke-deets{
+    color: white;
+    grid-area: details;
+    font-size:xx-large;
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+footer{
+    background-color:darkgrey;
+    grid-area: footer;
+    text-align: center;
+    /* grid-row: 1/3;
+    grid-column: 4/5; */
+}
+/* -------------------------------Responsive---------------------------------- */
+@media all and (max-width: 675px){
+    .container{
+        margin: 2px;
+        margin-right: 5px;
+        padding: 5px;
+        padding-right: 10px;
+        display:grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.2fr 0.3fr 3fr 2fr 0.2fr;
+        grid-gap: 0.2;    
+        max-width: 100%;
+        /* place-content: center; */
+        /* place-items: center; */
+    }
+    .nav-logo{
+        display: grid;
+        grid-area: logo;
+        height: 80.5px;
+        width: 166.6px;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        place-items: center;
+        
+    }
+    .nav-menu{
+        display: grid;
+        grid-area: nav;
+        grid-row: 2/3;
+        grid-column:1/2;
+        /* place-items: center; */
+
+    }
+    .nav-menu li{
+        display: inline;
+        list-style: none;
+        width: 100%;  
+    }
+    .nav-links{
+        color: rgb(10, 77, 233);
+        place-items: center;
+    }
+    .nav-links:hover{
+        color: rgb(251, 251, 5);
+        transition: all 0.2 ease-out;
+    }
+    #form-container {
+        grid-area: form;
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    .form-container h3{
+        color: white;
+    }
+    #search{
+        display: inline;
+        background-color: white;
+        border: 3px solid rgb(10, 77, 233);
+        border-radius: 8px;
+        
+    }
+    /* ------------------button----------------------- */
+    #btn{
+        display: inline;
+        position: absolute;
+        color: rgb(10, 77, 233);
+        background:white;
+        font-weight: 500;
+        padding: 7px 14px;
+        margin: 5px;
+        border: 3px solid rgb(10, 77, 233);
+        border-radius: 8px;
+        z-index: 1;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+    
+    #btn:before{
+        content: "";
+        position: absolute;
+        background: rgb(10, 77, 233);
+        height: 60px;
+        width: 112px;
+        border-radius: 0%;
+        z-index: -1;
+    }
+    #btn:hover{
+    color: white;
+    }
+    #btn::before{
+        top:100%;
+        left:0%;
+        transition: 0.4s;
+    }
+    #btn:hover:before{
+        top: -20px;
+        left: 0px;
+        
+    }
+    .poke-pic {
+        display: grid;
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        grid-row: 4/5;
+        grid-column: 1/ 2;
+        max-width: 100%;
+       place-items: center;
+    }
+    
+    .poke-deets{
+        display: grid;
+        place-items: center;
+        grid-area: details;
+        font-size:xx-large;
+        grid-row: 5/6;
+        grid-column: 1/2;
+    }
+    footer{
+        display: grid;
+        background-color: bisque;
+        grid-area: footer;
+        grid-row: 6/7;
+        grid-column: 1/2;
+        place-items: center;
+    }
+}
