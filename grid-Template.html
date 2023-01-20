@@ -6,14 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./grid-Template.css" />
+    <script defer src="./grid-Template.js"></script>
 </head>
 <body>
     <div class="container">
-        <logo>Logo</logo>
-        <nav>Navbar</nav>
-        <form>Form</form>
-        <div id="img">Image</div>
-        <div id="details">Details</div>
+        <logo><img src="./Pictures/pokemon-logo.png"/></logo>
+    <section class="nav-bar">
+        <nav class="nav">
+            <ul>
+                <li><a id="home" href="#">Home</a></li>
+                <li><a id="stuff" href="#">Stuff</a></li>
+                <li><a id="contact" href="#">Contact</a></li>
+                <li><a id="about" href="#">About</a></li>
+            </ul>
+        </nav>
+    </section>
+        <form class="form">
+                <section class="input">
+                    <input id="search" type="text" name="input" placeholder="Choose Your Pokemon">
+                </section>
+                <section class="btn">
+                    <button id="btn" type="submit">Click Me!</button>
+                </section>
+        </form>
+        <main>
+            <section id="img-container"><div id="img">Image</div>
+            
+            </section>
+            <section class="details"><div id="details">Details</div></section>
+        </main>
         <footer>Footer</footer>
     </div>
 </body>

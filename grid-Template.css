@@ -2,31 +2,87 @@
     display:grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.3fr 3fr 0.2fr;
+    /* grid-template-rows: 0.5fr 0.5fr 0.3fr 5fr 0.2fr; */
+    grid-template-rows: 0.5fr 0.5fr 0.3fr 5fr 0.2fr;
     grid-template-areas: 
-    "logo nav nav"
+    "logo logo logo"
+    "nav nav nav"
     "form form form"
-    "img img details"
+    "main main main"
     "footer footer footer";
     grid-gap: 0.2rem;
+    }
+    main{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0.2rem;
+        grid-template-areas: 
+        "img img details";
     }
     logo{
     background-color: lightblue;
     grid-area: logo;
     }
-    nav{
+    logo img{
+        object-fit: cover;
+    height: 80.5px;
+    width: 166.6px;
+    }
+    .nav-bar{
     background-color: lightgreen;
+    position: relative;
     grid-area: nav;
+    
+    
+    }
+    .nav ul{
+        margin-right: 10px;
+        position: absolute;
+        top:-10px;
+        right:0px;
+      
+        
+    }
+    nav ul li{
+        padding-right: 2px;
+        display: inline;
+        list-style: none;
+       
+    }
+    nav ul li :hover{
+        color:yellow
     }
     form{
     background-color: aquamarine;
+    position: relative;
     grid-area: form;
     }
-    #img{
+    form .input{
+        position: absolute;
+        top: 5px;
+        margin-left: 50px;
+    }
+    form .btn{
+        position: absolute;
+        top: 5px;
+        margin-left: 200px;
+    }
+    #img-container{
     background-color: pink;
     grid-area: img;
+    position: relative;
     }
-    #details{
+    .img{
+        
+        object-fit: cover;
+        object-position: center;
+        place-items: center;
+        max-width: 70%;
+        height: auto;
+    }
+    .details{
     background-color: turquoise;
     grid-area: details;
     }
@@ -37,15 +93,26 @@
     
     @media only screen and (max-width:550px){
     .container{
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 0.2fr 0.3fr 3fr 2fr 0.2fr;
+    grid-template-rows: 0.3fr 0.2fr 0.3fr 3fr 0.2fr;
     grid-gap: 0.2;
+    text-align: center ;
     grid-template-areas:
     "logo"
     "nav"
     "form"
-    "img"
-    "details"
+    "main"
     "footer";
     }
+    main{
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "img"
+        "details";
     }
+    }
+  
+   
