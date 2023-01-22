@@ -3,10 +3,10 @@
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     /* grid-template-rows: 0.5fr 0.5fr 0.3fr 5fr 0.2fr; */
-    grid-template-rows: 0.5fr 0.5fr 0.3fr 5fr 0.2fr;
+    grid-template-rows: 0.5fr 0.2fr 0.3fr 5fr 0.2fr;
     grid-template-areas: 
-    "logo logo logo"
-    "nav nav nav"
+    "logo logo nav"
+    ". . ."
     "form form form"
     "main main main"
     "footer footer footer";
@@ -40,7 +40,7 @@
     .nav ul{
         margin-right: 10px;
         position: absolute;
-        top:-10px;
+        bottom:-2px;
         right:0px;
       
         
@@ -83,8 +83,28 @@
         height: auto;
     }
     .details{
-    background-color: turquoise;
-    grid-area: details;
+        display: grid;
+        background-color: turquoise;
+        grid-area: details;
+        position: relative;
+        place-items: center;
+    }
+    .details h3{
+        position: absolute;
+        top: 5px;
+        
+        
+    }
+    .details ul{
+       position: absolute;
+       top: 10%;
+       width: 80%;
+       place-content: center;
+       
+    }
+    .details ul li{
+        padding: 7px;
+        list-style: none;
     }
     footer{
     background-color: bisque;
