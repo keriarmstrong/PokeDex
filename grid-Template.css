@@ -31,8 +31,10 @@
     width: 166.6px;
     }
     .nav-bar{
-    background-color: lightgreen;
     position: relative;
+    top: 0;    
+    background-color: lightgreen;
+    /* position: relative; */
     grid-area: nav;
     
     
@@ -124,6 +126,10 @@
     "form"
     "main"
     "footer";
+    }
+    .nav-bar{
+        position: sticky;
+        top:0;
     }
     main{
         display: grid;

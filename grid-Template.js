@@ -6,9 +6,6 @@ const form = document.querySelector('form')
 const search = document.querySelector('input')
 let searchValue = search.value
 
-
-
-
     async function getPokemonData(searchValue){
     await fetch (`${URL}`)
     .then(res => {
