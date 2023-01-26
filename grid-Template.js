@@ -66,7 +66,7 @@ let searchValue = search.value
         }else if(selectedType.includes('electric')){
             pokemonImg.setAttribute('style', "background-color: rgb(239, 239, 109);")
         }else if(selectedType.includes('normal')){
-            pokemonImg.setAttribute('style', "background-color: lightbrown;")
+            pokemonImg.setAttribute('style', "background-color: bisque;")
         }
 
         form.reset()
