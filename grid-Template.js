@@ -48,7 +48,7 @@ let searchValue = search.value
         console.log(selectedType)
 
         if(selectedType.includes('fire')){
-            pokemonImg.setAttribute('style', "background-color: red;")
+            pokemonImg.setAttribute('style', "background-color: orange;")
         }else if(selectedType.includes('grass')){
             pokemonImg.setAttribute('style', "background-color: green;")
         }else if(selectedType.includes('psychic')){
@@ -65,6 +65,8 @@ let searchValue = search.value
             pokemonImg.setAttribute('style', "background-color: darkgray;")
         }else if(selectedType.includes('electric')){
             pokemonImg.setAttribute('style', "background-color: rgb(239, 239, 109);")
+        }else if(selectedType.includes('normal')){
+            pokemonImg.setAttribute('style', "background-color: lightbrown;")
         }
 
         form.reset()
